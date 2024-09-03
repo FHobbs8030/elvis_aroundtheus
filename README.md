@@ -21,7 +21,7 @@ This is the 3rd project of the Software Engineering program at TripleTen. It was
 
 ## Take a Look at the Project
 
-click [here](https://FHobbs8030.github.io/se_project_aroundtheus/)
+click [here](https://FHobbs8030.github.io/elvis_aroundtheus/)
 
 =========================================
 

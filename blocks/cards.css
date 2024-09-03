@@ -18,11 +18,23 @@
 
 .cards__image {
   width: 282px;
-  height: 282px;
+  height: 80%;
+  object-fit: cover;
+  border-style: inset;
   border-radius: 10px 10px 0px 0px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  filter: contrast(1.1) brightness(0.9);
+}
+
+.cards__image:hover {
+  transform: scale(1.05);
+  filter: brightness(110%);
+  transition: transform 0.3s, filter 0.3s;
 }
 
 .cards__title {
+  display: flex;
+  justify-content: space-evenly;
   color: black;
   font-weight: 900;
   font-size: 24px;

@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="autor" content="Fred Hobbs" />
+    <meta name="author" content="Fred Hobbs" />
     <link rel="stylesheet" href="./pages/index.css" />
     <link rel="preconnect" href="https://rsms.me/" />
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
-    <title>Elvis Around the us</title>
+    <title>Elvis Around the US</title>
   </head>
 
   <body class="page">
@@ -20,7 +20,7 @@
           alt="elvis-around-the-us-logo"
         />
       </header>
-        <main>
+      <main>
         <section class="profile">
           <img
             class="profile__image"
@@ -37,14 +37,15 @@
           <button class="profile__add-button" type="button"></button>
         </section>
         <section class="cards">
-          <div class="cards__card">
+          <!-- Card 1 -->
+          <div class="cards__card" id="dontBeCruelCard">
             <img
               class="cards__image"
               src="./images/card-images/elvis1.jpg"
               alt="photo-of-elvis-presley"
             />
             <div class="cards__footer">
-              <h2 class="cards__title">My Way</h2>
+              <h2 class="cards__title">Don't be Cruel</h2>
               <button class="cards__heart" type="button">
                 <img
                   class="heart__image"
@@ -55,7 +56,8 @@
             </div>
           </div>
 
-          <div class="cards__card">
+          <!-- Card 2 -->
+          <div class="cards__card" id="returnToSenderCard">
             <img
               class="cards__image"
               src="./images/card-images/elvis2.jpg"
@@ -73,14 +75,15 @@
             </div>
           </div>
 
-          <div class="cards__card">
+          <!-- Card 3 -->
+          <div class="cards__card" id="KentuckyRainCard">
             <img
               class="cards__image"
               src="./images/card-images/elvis3.jpg"
               alt="photo-of-elvis-presley"
             />
             <div class="cards__footer">
-              <h2 class="cards__title">Heartbreak Hotel</h2>
+              <h2 class="cards__title">Kentucky Rain</h2>
               <button class="cards__heart" type="button">
                 <img
                   class="heart__image"
@@ -91,7 +94,8 @@
             </div>
           </div>
 
-          <div class="cards__card">
+          <!-- Card 4 -->
+          <div class="cards__card" id="dontCard">
             <img
               class="cards__image"
               src="./images/card-images/elvis4.jpg"
@@ -109,14 +113,15 @@
             </div>
           </div>
 
-          <div class="cards__card">
+          <!-- Card 5 -->
+          <div class="cards__card" id="DontCryDaddyCard">
             <img
               class="cards__image"
               src="./images/card-images/elvis5.jpg"
               alt="photo-of-elvis-presley"
             />
             <div class="cards__footer">
-              <h2 class="cards__title">Love Me Tender</h2>
+              <h2 class="cards__title">Don't Cry Daddy</h2>
               <button class="cards__heart" type="button">
                 <img
                   class="heart__image"
@@ -126,14 +131,16 @@
               </button>
             </div>
           </div>
-          <div class="cards__card">
+
+          <!-- Card 6 -->
+          <div class="cards__card" id="IwantyouIneedyouCard">
             <img
               class="cards__image"
               src="./images/card-images/elvis6.jpg"
               alt="photo-of-elvis-presley"
             />
             <div class="cards__footer">
-              <h2 class="cards__title">Don't be Cruel</h2>
+              <h2 class="cards__title">I want You I need you</h2>
               <button class="cards__heart" type="button">
                 <img
                   class="heart__image"
@@ -149,5 +156,119 @@
         <p class="footer__title">© 2022 Around The U.S.</p>
       </footer>
     </div>
+
+    <!-- Audio elements to play the songs -->
+    <audio id="audioPlayer1" src="./images/audio/dbc.mp3"></audio>
+    <audio id="audioPlayer2" src="./images/audio/return_to_sender.mp3"></audio>
+    <audio id="audioPlayer3" src="./images/audio/kentucky_rain.mp3"></audio>
+    <audio id="audioPlayer4" src="./images/audio/dont.mp3"></audio>
+    <audio id="audioPlayer5" src="./images/audio/dont_cry_daddy.mp3"></audio>
+    <audio id="audioPlayer6" src="./images/audio/i_want_you_i_need_you.mp3"></audio>
+
+    <!-- JavaScript code to handle hover events and play/pause audio -->
+    <script>
+
+      // First card
+      const dontBeCruelCard = document.getElementById("dontBeCruelCard");
+      const audioPlayer1 = document.getElementById("audioPlayer1");
+
+      dontBeCruelCard.addEventListener("mouseenter", () => {
+        console.log("Mouse entered the Don't be Cruel card");
+        audioPlayer1.play().catch((error) => {
+          console.error("Error playing audio:", error);
+        });
+      });
+
+      dontBeCruelCard.addEventListener("mouseleave", () => {
+        console.log("Mouse left the Don't be Cruel card");
+        audioPlayer1.pause();
+        audioPlayer1.currentTime = 0; // Reset the audio to the start
+      });
+      
+     // Second card
+      const returnToSenderCard = document.getElementById("returnToSenderCard");
+      const audioPlayer2 = document.getElementById("audioPlayer2");
+
+      returnToSenderCard.addEventListener("mouseenter", () => {
+        console.log("Mouse entered the Return to Sender card");
+        audioPlayer2.play().catch((error) => {
+          console.error("Error playing audio:", error);
+        });
+      });
+
+      returnToSenderCard.addEventListener("mouseleave", () => {
+        console.log("Mouse left the Return to Sender card");
+        audioPlayer2.pause();
+        audioPlayer2.currentTime = 0; // Reset the audio to the start
+      }); 
+
+      // Third card
+      const KentuckyRainCard = document.getElementById("KentuckyRainCard");
+      const audioPlayer3 = document.getElementById("audioPlayer3");
+
+      KentuckyRainCard.addEventListener("mouseenter", () => {
+        console.log("Mouse entered the Kentucky Rain card");
+        audioPlayer3.play().catch((error) => {
+          console.error("Error playing audio:", error);
+        });
+      });
+
+      KentuckyRainCard.addEventListener("mouseleave", () => {
+        console.log("Mouse left the Kentucky Rain card");
+        audioPlayer3.pause();
+        audioPlayer3.currentTime = 0; // Reset the audio to the start
+      }); 
+
+      // Fourth card
+      const dontCard = document.getElementById("dontCard");
+      const audioPlayer4 = document.getElementById("audioPlayer4");
+
+      dontCard.addEventListener("mouseenter", () => {
+        console.log("Mouse entered the Don't card");
+        audioPlayer4.play().catch((error) => {
+          console.error("Error playing audio:", error);
+        });
+      });
+
+      dontCard.addEventListener("mouseleave", () => {
+        console.log("Mouse left the Don't card");
+        audioPlayer4.pause();
+        audioPlayer4.currentTime = 0; // Reset the audio to the start
+      }); 
+    
+      // Fifth card
+      const DontCryDaddyCard = document.getElementById("DontCryDaddyCard");
+      const audioPlayer5 = document.getElementById("audioPlayer5");
+
+      DontCryDaddyCard.addEventListener("mouseenter", () => {
+        console.log("Mouse entered the Don't Cry Daddy card");
+        audioPlayer5.play().catch((error) => {
+          console.error("Error playing audio:", error);
+        });
+      });
+
+      DontCryDaddyCard.addEventListener("mouseleave", () => {
+        console.log("Mouse left the Don't Cry Daddy card");
+        audioPlayer5.pause();
+        audioPlayer5.currentTime = 0; // Reset the audio to the start
+      }); 
+
+      // sixth card
+      const IwantyouIneedyouCard = document.getElementById("IwantyouIneedyouCard");
+      const audioPlayer6 = document.getElementById("audioPlayer6");
+
+      IwantyouIneedyouCard.addEventListener("mouseenter", () => {
+        console.log("Mouse entered the I want you I need you card");
+        audioPlayer6.play().catch((error) => {
+          console.error("Error playing audio:", error);
+        });
+      });
+
+      IwantyouIneedyouCard.addEventListener("mouseleave", () => {
+        console.log("Mouse left the I want you I need you card");
+        audioPlayer6.pause();
+        audioPlayer6.currentTime = 0; // Reset the audio to the start
+      }); 
+    </script>
   </body>
 </html>

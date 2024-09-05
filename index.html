@@ -13,7 +13,12 @@
 
   <body class="page">
     <div class="page__content">
-      <header class="header">
+      <div class="page__content">
+
+    <!-- Add this button for enabling sound -->
+    <button id="enableSound" class="enable-sound-button">Enable Sound</button>
+     
+    <header class="header">
         <img
           class="header__logo"
           src="./images/logo.svg"
@@ -166,109 +171,6 @@
     <audio id="audioPlayer6" src="./images/audio/i_want_you_i_need_you.mp3"></audio>
 
     <!-- JavaScript code to handle hover events and play/pause audio -->
-    <script>
-
-      // First card
-      const dontBeCruelCard = document.getElementById("dontBeCruelCard");
-      const audioPlayer1 = document.getElementById("audioPlayer1");
-
-      dontBeCruelCard.addEventListener("mouseenter", () => {
-        console.log("Mouse entered the Don't be Cruel card");
-        audioPlayer1.play().catch((error) => {
-          console.error("Error playing audio:", error);
-        });
-      });
-
-      dontBeCruelCard.addEventListener("mouseleave", () => {
-        console.log("Mouse left the Don't be Cruel card");
-        audioPlayer1.pause();
-        audioPlayer1.currentTime = 0; // Reset the audio to the start
-      });
-      
-     // Second card
-      const returnToSenderCard = document.getElementById("returnToSenderCard");
-      const audioPlayer2 = document.getElementById("audioPlayer2");
-
-      returnToSenderCard.addEventListener("mouseenter", () => {
-        console.log("Mouse entered the Return to Sender card");
-        audioPlayer2.play().catch((error) => {
-          console.error("Error playing audio:", error);
-        });
-      });
-
-      returnToSenderCard.addEventListener("mouseleave", () => {
-        console.log("Mouse left the Return to Sender card");
-        audioPlayer2.pause();
-        audioPlayer2.currentTime = 0; // Reset the audio to the start
-      }); 
-
-      // Third card
-      const KentuckyRainCard = document.getElementById("KentuckyRainCard");
-      const audioPlayer3 = document.getElementById("audioPlayer3");
-
-      KentuckyRainCard.addEventListener("mouseenter", () => {
-        console.log("Mouse entered the Kentucky Rain card");
-        audioPlayer3.play().catch((error) => {
-          console.error("Error playing audio:", error);
-        });
-      });
-
-      KentuckyRainCard.addEventListener("mouseleave", () => {
-        console.log("Mouse left the Kentucky Rain card");
-        audioPlayer3.pause();
-        audioPlayer3.currentTime = 0; // Reset the audio to the start
-      }); 
-
-      // Fourth card
-      const dontCard = document.getElementById("dontCard");
-      const audioPlayer4 = document.getElementById("audioPlayer4");
-
-      dontCard.addEventListener("mouseenter", () => {
-        console.log("Mouse entered the Don't card");
-        audioPlayer4.play().catch((error) => {
-          console.error("Error playing audio:", error);
-        });
-      });
-
-      dontCard.addEventListener("mouseleave", () => {
-        console.log("Mouse left the Don't card");
-        audioPlayer4.pause();
-        audioPlayer4.currentTime = 0; // Reset the audio to the start
-      }); 
-    
-      // Fifth card
-      const DontCryDaddyCard = document.getElementById("DontCryDaddyCard");
-      const audioPlayer5 = document.getElementById("audioPlayer5");
-
-      DontCryDaddyCard.addEventListener("mouseenter", () => {
-        console.log("Mouse entered the Don't Cry Daddy card");
-        audioPlayer5.play().catch((error) => {
-          console.error("Error playing audio:", error);
-        });
-      });
-
-      DontCryDaddyCard.addEventListener("mouseleave", () => {
-        console.log("Mouse left the Don't Cry Daddy card");
-        audioPlayer5.pause();
-        audioPlayer5.currentTime = 0; // Reset the audio to the start
-      }); 
-
-      // sixth card
-      const IwantyouIneedyouCard = document.getElementById("IwantyouIneedyouCard");
-      const audioPlayer6 = document.getElementById("audioPlayer6");
-
-      IwantyouIneedyouCard.addEventListener("mouseenter", () => {
-        console.log("Mouse entered the I want you I need you card");
-        audioPlayer6.play().catch((error) => {
-          console.error("Error playing audio:", error);
-        });
-      });
-
-      IwantyouIneedyouCard.addEventListener("mouseleave", () => {
-        console.log("Mouse left the I want you I need you card");
-        audioPlayer6.pause();
-        audioPlayer6.currentTime = 0; // Reset the audio to the start
-      }); 
-    </script>
+    <script src="./js/main.js"></script>
   </body>
 </html>

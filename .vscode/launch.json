@@ -8,7 +8,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Open index.html",
-            "file": "c:\\Users\\Owner\\projects\\elvis_aroundtheus\\index.html"
+            "file": "C:/Users/HOME/elvis_aroundtheus/index.html"
         }
     ]
 }

@@ -1,6 +1,6 @@
 # elvis_aroundtheus
 
-This is the 3rd project of the Software Engineering program at TripleTen. It was created using HTML and CSS, based on the design brief.
+This is an independent project of the Software Engineering program at TripleTen. It was created using HTML and CSS, based on the design brief.
 
 ## Project features
 

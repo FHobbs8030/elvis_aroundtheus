@@ -33,7 +33,6 @@
 }
 
 .cards__title {
-  display: flex;
   justify-content: space-evenly;
   color: black;
   font-weight: 900;
@@ -43,6 +42,7 @@
   white-space: nowrap;
   overflow: hidden;
   align-items: center;
+  max-width: 220px;
   flex: 1;
   margin: 25px 0px 25px 20px;
 }
